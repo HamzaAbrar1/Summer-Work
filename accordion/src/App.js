@@ -34,45 +34,72 @@ function App() {
 
   // console.log(qaArray);
 
+const [multipe,setMultiple]=useState(false);
+
+const [enableMult,setEnableMult]=useState([]);
+
+
   const [enable, setEnable] = useState(null);
 
   const handleClick = (id) => {
-    console.log("clicked on ", id);
-    if(enable==id){
-      setEnable(null)
+    console.log("clicked on inside the single", id);
+    if (enable == id) {
+      setEnable(null);
+    } else {
+      setEnable(id);
+    }
+  };
+  const handleMultiple=(id)=>{
+    console.log("clicked on inside the multiple ", id);
+    let val=enableMult
+    if(val.includes(id)){
+      let index=val.indexOf(id);
+      val.splice(index,1);
     }
     else{
-    setEnable(id);
+      val.push(id);
+setEnableMult(val);    
+    }
   }
-};
 
   return (
     <div className="App">
+
+        <button onClick={
+          ()=>{
+          setMultiple(!multipe);
+          }
+        }> enable Multiple</button>
       {qaArray.map((elem) => (
         <div id={elem.id}>
           <h1>{elem.question}</h1>
-          <p className="chichi"
+          <p
+            className="chichi"
             onClick={() => {
-              handleClick(elem.id);
+              {
+                multipe ? handleMultiple (elem.id):handleClick(elem.id);
+              }  
+              // handleClick(elem.id);
             }}
           >
             +
           </p>
           {
-
+            multipe && enableMult.includes(elem.id)?  <p>
+            <b>{elem.answer}</b>
+          </p>:
+          <div></div>
           }
-          { 
-          elem.id == enable &&
-           <div>
-           <p>
-            <b>
-            {elem.answer}
-            </b></p> 
-           </div>
-            }
+          {elem.id == enable && (
+            <div>
+              <p>
+                <b>{elem.answer}</b>
+              </p>
+            </div>
+          )}
         </div>
       ))}
-       </div>
+    </div>
   );
 }
 

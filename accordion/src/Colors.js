@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 
 export default function Colors() {
+    const [value,setValue]=useState("#fff");
   const hexgenerator = () => {
     let start = "#";
     let val = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
@@ -12,7 +13,8 @@ export default function Colors() {
     }
     let outer = document.getElementsByClassName("back")[0];
     outer.style.backgroundColor = start;
-    return start;
+    setValue(start);
+    // return start;
   };
 
   const rgb = () => {
@@ -22,7 +24,10 @@ export default function Colors() {
 
     let outer = document.getElementsByClassName("back")[0];
     outer.style.backgroundColor = `rgb(${value1},${value2},${value3})`;
-  };
+    setValue(
+        `rgb(${value1},${value2},${value3})`
+    )
+}
 
   const [rgballo,setRgbAllow]=useState(false)
   const generatorAllower=()=>{
@@ -33,9 +38,7 @@ setRgbAllow(!rgballo);
     <div
       className="back"
       style={{
-        // backgroundColor: hexgenerator(),
-        height: "100vh",
-        background: rgb(22, 100, 20),
+        height:"100vh"
       }}
     >
       {!rgballo &&
@@ -43,6 +46,17 @@ setRgbAllow(!rgballo);
       {rgballo && <button onClick={rgb}>Rgb Generate</button>
 }
 <button onClick={generatorAllower}>Change Generator</button>
+   {!rgballo && 
+    <p>
+        <span style={{ color: "white" }}>HexColor: </span> {value}
+    </p>
+}
+{rgballo && 
+    <p>
+        <span style={{ color: "white" }}>RgbColor: </span> {value}
+    </p>
+}
+
     </div>
   );
 }

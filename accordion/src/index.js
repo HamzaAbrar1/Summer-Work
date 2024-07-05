@@ -4,11 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Colors from './Colors';
+import Stars from './Stars';
+import Changetheme from './Changetheme';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Colors />
+    {/* <Colors  /> */}
+    {/* <Stars no={10}/> */}
+    <Changetheme/>
+  
   </React.StrictMode>
 );
 

@@ -6,14 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import Colors from './Colors';
 import Stars from './Stars';
 import Changetheme from './Changetheme';
+import Imageslider from './Imageslider';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Colors  /> */}
     {/* <Stars no={10}/> */}
-    <Changetheme/>
-  
+    {/* <Changetheme/> */}
+   
+    <Imageslider/>
+ 
   </React.StrictMode>
 );
 

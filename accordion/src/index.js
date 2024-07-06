@@ -7,6 +7,8 @@ import Colors from './Colors';
 import Stars from './Stars';
 import Changetheme from './Changetheme';
 import Imageslider from './Imageslider';
+
+import LoadContent from './LoadContent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,8 +17,10 @@ root.render(
     {/* <Stars no={10}/> */}
     {/* <Changetheme/> */}
    
-    <Imageslider/>
- 
+    {/* <Imageslider/> */}
+    <LoadContent/>
+
+  
   </React.StrictMode>
 );
 

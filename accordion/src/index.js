@@ -7,7 +7,7 @@ import Colors from './Colors';
 import Stars from './Stars';
 import Changetheme from './Changetheme';
 import Imageslider from './Imageslider';
-
+import Tabs from './tabs';
 import LoadContent from './LoadContent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,8 +18,8 @@ root.render(
     {/* <Changetheme/> */}
    
     {/* <Imageslider/> */}
-    <LoadContent/>
-
+    {/* <LoadContent/> */}
+<Tabs/>
   
   </React.StrictMode>
 );

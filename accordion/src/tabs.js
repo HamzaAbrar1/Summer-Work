@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function tabs() {
+export default function Tabs() {
   let ad = [
     { no: "tab1", content: "hello i can write content from tab 1" },
     { no: "tab2", content: "hello i can write content from tab 2" },
@@ -16,7 +16,7 @@ const getIndex=(currIndex)=>{
 
   return <div>
 {
-    ad.map((cont,index)=(
+    ad.map((cont,index)=>(
 <div key={index}>
 <button onClick={()=>{
     getIndex(index)

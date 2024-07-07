@@ -8,6 +8,7 @@ import Stars from './Stars';
 import Changetheme from './Changetheme';
 import Imageslider from './Imageslider';
 import Tabs from './tabs';
+import Modal from './Modal';
 import LoadContent from './LoadContent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,8 +20,9 @@ root.render(
    
     {/* <Imageslider/> */}
     {/* <LoadContent/> */}
-<Tabs/>
-  
+{/* <Tabs/> */}
+  <Modal/>
+ 
   </React.StrictMode>
 );
 

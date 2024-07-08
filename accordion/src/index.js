@@ -10,7 +10,10 @@ import Imageslider from './Imageslider';
 import Tabs from './tabs';
 import Modal from './Modal';
 import LoadContent from './LoadContent';
+import Searchbox from './Searchbox';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     {/* <App /> */}
@@ -21,7 +24,10 @@ root.render(
     {/* <Imageslider/> */}
     {/* <LoadContent/> */}
 {/* <Tabs/> */}
-  <Modal/>
+  {/* <Modal/> */}
+
+  <Searchbox/>
+  {/* </Searchnox> */}
  
   </React.StrictMode>
 );

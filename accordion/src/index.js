@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -11,10 +11,18 @@ import Tabs from './tabs';
 import Modal from './Modal';
 import LoadContent from './LoadContent';
 import Searchbox from './Searchbox';
-
+import Login from './Login';
+import Profile from './Profile';
+import UserContextProvider from './context/UserContextProvider';
+import Splash from './Splash';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
+
+
+
 root.render(
+  
   <React.StrictMode>
     {/* <App /> */}
     {/* <Colors  /> */}
@@ -26,9 +34,19 @@ root.render(
 {/* <Tabs/> */}
   {/* <Modal/> */}
 
-  <Searchbox/>
+  {/* <Searchbox/> */}
   {/* </Searchnox> */}
  
+{/* {value && <Splash/>}
+{!value && <LoadContent/>} */}
+{/* <App/> */}
+
+<UserContextProvider>
+  <Login/>
+  <Profile/>
+</UserContextProvider>
+
+
   </React.StrictMode>
 );
 

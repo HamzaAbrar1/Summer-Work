@@ -9,7 +9,7 @@ export default function Stars({no}) {
     const func=(index)=>{
        
         setActive(index)
-        console.log(active)
+        // console.log(active)
         // console.log(index)
     }
     const func1=(index)=>{ 

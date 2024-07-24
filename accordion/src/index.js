@@ -16,7 +16,7 @@ import Profile from "./Profile";
 import UserContextProvider from "./context/UserContextProvider";
 import Splash from "./Splash";
 import Practice from "./Practice";
-
+import Accordion from "./Accordion";
 import Forms from "./Forms";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -47,8 +47,11 @@ root.render(
 
 {/* <Practice/> */}
 {/* </Practice> */}
-<Forms/>
+{/* <Forms/> */}
 {/* </Forms> */}
+
+<Accordion/>
+{/* </Accordion> */}
   </React.StrictMode>
 );
 

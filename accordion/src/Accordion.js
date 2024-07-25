@@ -51,7 +51,7 @@ return newArr12;
     }
   };
   return (
-    <div className="flex-col bg-slate-800">
+    <div className="flex-col bg-slate-800 h-screen">
       <button
         onClick={(e) => {
           e.preventDefault();
@@ -81,7 +81,7 @@ return newArr12;
 
           {enableMult ? 
             multValue.indexOf(index) != -1 ? 
-              <div className="text-white"> {item.answer} </div>
+              <div className="text-white md:text-orange-500"> {item.answer} </div>
              : null
            : select === index ? 
             <div className="text-white"> {item.answer} </div>

@@ -4,11 +4,12 @@ import "./star.css"
 export default function Stars({no}) {
     // console.log(no)
 
-    const [active,setActive]=useState(0)
+    const [rating,setRating]=useState(0)
     const [hover,setHover]=useState(0)
     const func=(index)=>{
        
-        setActive(index)
+        // setActive(index)
+      setRating(index)
         // console.log(active)
         // console.log(index)
     }
@@ -17,7 +18,7 @@ export default function Stars({no}) {
         // console.log(index)
     }
     const func2=(index)=>{  
-    setHover(index);
+    setHover(rating);
         //   console.log(index)
     }
   return (
@@ -25,7 +26,7 @@ export default function Stars({no}) {
     {[...Array(no)].map((_,index)=>(
         <FaStar
         key={index+1}
-        className= {index+1<= (active||hover)? "active" : "inactive"}
+        className= {index+1<= (hover || rating)? "active" : "inactive"}
 
         onClick={ ()=> func(index+1) }
         onMouseEnter={()=> func1(index+1)}

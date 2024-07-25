@@ -25,7 +25,7 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Colors  /> */}
-    {/* <Stars no={10}/> */}
+    <Stars no={10}/>
     {/* <Changetheme/> */}
 
     {/* <Imageslider/> */}
@@ -50,7 +50,7 @@ root.render(
 {/* <Forms/> */}
 {/* </Forms> */}
 
-<Accordion/>
+{/* <Accordion/> */}
 {/* </Accordion> */}
   </React.StrictMode>
 );

@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {FaStar} from "react-icons/fa"
 import "./star.css"
-export default function Stars({no}) {
+export default function Stars({no=10}) {
     // console.log(no)
 
     const [rating,setRating]=useState(0)
@@ -26,7 +26,7 @@ export default function Stars({no}) {
     {[...Array(no)].map((_,index)=>(
         <FaStar
         key={index+1}
-        className= {index+1<= (hover || rating)? "active" : "inactive"}
+        className= {index+1<= (hover || rating)? "text-orange-600" : "bg-white"}
 
         onClick={ ()=> func(index+1) }
         onMouseEnter={()=> func1(index+1)}

@@ -6,9 +6,9 @@ export default function Imageslider() {
   const [src, setSrc] = useState(null);
   const [count, setCount] = useState(0);
   const fetchData = async () => {
-    const res = await fetch("https://dummyjson.com/products?limit=20&skip=0");
+    const res = await fetch("https://dummyjson.com/products");
     const data = await res.json();
-    console.log(data.products);
+
     setResult(data.products);
     setSrc(data.products[count].images[0]);
   };
@@ -16,7 +16,7 @@ export default function Imageslider() {
     fetchData();
   }, []);
   const leftSlider = () => {
-    console.log(count);
+   
     setSrc(result[count].images[0]);
     if (count === 0) {
       setCount(result.length - 1);
@@ -54,13 +54,17 @@ export default function Imageslider() {
             onClick={() => {
               leftSlider();
             }}
+
+            className=" bg-orange-500 rounded-2xl w-20 hover:bg-orange-400 hover:w-24 hover:transition-all"
           >
             leftSlider
           </button>
+          <div className="w-10 inline" ></div>
           <button
             onClick={() => {
               rightSlider();
             }}
+            className=" bg-orange-500 rounded-2xl w-20 hover:bg-orange-400 hover:w-24 hover:transition-all"
           >
             rightSlider
           </button>

@@ -18,6 +18,8 @@ import Splash from "./Splash";
 import Practice from "./Practice";
 import Accordion from "./Accordion";
 import Forms from "./Forms";
+import TicTacToe from "./TicTacToe";
+import Landing from "./Landing";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -25,8 +27,11 @@ root.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Colors  /> */}
-    <Stars no={10}/>
+    {/* <Stars /> */}
     {/* <Changetheme/> */}
+{/* <TicTacToe/> */}
+{/* </TicTacToe> */}
+
 
     {/* <Imageslider/> */}
     {/* <LoadContent/> */}
@@ -38,6 +43,9 @@ root.render(
 
     {/* {value && <Splash/>}
 {!value && <LoadContent/>} */}
+<Landing
+/>
+{/* </Landing> */}
     {/* <App/> */}
 {/* 
     <UserContextProvider>

@@ -23,9 +23,14 @@ export const user = createSlice({
       let value = action.payload;
       state.roll_no = value;
     },
+    setNameAndRollNo:(state,action)=>{
+      let {name1,roll_no1}=action.payload
+      state.name=name1
+      state.roll_no=roll_no1
+    }
   },
 });
 
-export const {setRollno,setname,getRollNo,getname}=user.actions
+export const {setRollno,setname,getRollNo,getname,setNameAndRollNo}=user.actions
 
 export default user.reducer

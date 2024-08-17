@@ -20,11 +20,18 @@ import Accordion from "./Accordion";
 import Forms from "./Forms";
 import TicTacToe from "./TicTacToe";
 import Landing from "./Landing";
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
+import {Provider} from "react-redux"
+import Store from "./Store/Store.js";
+import Showing from "./Showing.js";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
+    <Provider store={Store}>
+
+
     {/* <App /> */}
     {/* <Colors  /> */}
     {/* <Stars /> */}
@@ -43,8 +50,8 @@ root.render(
 
     {/* {value && <Splash/>}
 {!value && <LoadContent/>} */}
-<Landing
-/>
+{/* <Landing
+/> */}
 {/* </Landing> */}
     {/* <App/> */}
 {/* 
@@ -60,6 +67,13 @@ root.render(
 
 {/* <Accordion/> */}
 {/* </Accordion> */}
+
+
+<Showing/>
+
+{/* </Showing> */}
+
+</Provider>
   </React.StrictMode>
 );
 

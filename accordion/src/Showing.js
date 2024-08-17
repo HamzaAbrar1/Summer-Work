@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addtodo,removeTodo } from "./Store/TodosSlice";
+import { addtodo, removeTodo,updateTodo } from "./Store/TodosSlice";
 // const [todos,setTodos]=useState([]);
 
 //  const todo= useSelector((state)=>{
@@ -31,15 +31,50 @@ function Showing() {
     setMessage("");
   };
 
-  return (
+//   const [message1,setMessage1]=useState("");
+  const [editIndex, setEdindex] = useState(null);
+const [val,setVal]=useState("")
+  return ( 
     <div>
-      {todos.map((elem) => (
+      {todos.map((elem, index) => (
         <div id={elem.id}>
-          <h1>{elem.message}</h1>
+          <input
+            type="text"
+        value={ index===editIndex? val:elem.message}
+            name=""
+            disabled={index === editIndex ? false : true}
+            id=""
+            onChange={(e)=>{
+                setVal(e.target.value)
+            }}            
+            className="bg-white"
+          />
+          {/* <h1></h1> */}
+          {index === editIndex ? (
+            <button className="bg-green-500" onClick={()=>{
+                
+                dispatch(updateTodo({id:elem.id,message:val}))
+                setEdindex(null)
 
-          <button className="bg-blue-900" onClick={()=>{
-            dispatch(removeTodo(elem.id))
-          }}>remove</button>
+            }}> Done </button>
+          ) : null}
+          <button
+            className="bg-blue-900"
+            onClick={() => {
+              dispatch(removeTodo(elem.id));
+            }}
+          >
+            remove
+          </button>
+          <button
+            className="bg-slate-800"
+            onClick={() => {
+                setVal(elem.message)
+              setEdindex(index);
+            }}
+          >
+            Update
+          </button>
         </div>
       ))}
       <div>

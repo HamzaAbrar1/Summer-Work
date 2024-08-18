@@ -20,7 +20,7 @@ import Accordion from "./Accordion";
 import Forms from "./Forms";
 import TicTacToe from "./TicTacToe";
 import Landing from "./Landing";
-
+import Accordion1 from "./Accordion1.js";
 import {Provider} from "react-redux"
 import Store from "./Store/Store.js";
 import Showing from "./Showing.js";
@@ -69,8 +69,9 @@ root.render(
 {/* </Accordion> */}
 
 
-<Showing/>
-
+{/* <Showing/> */}
+<Accordion1/>
+{/* </Accordion1> */}
 {/* </Showing> */}
 
 </Provider>

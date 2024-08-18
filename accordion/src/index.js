@@ -24,6 +24,8 @@ import Accordion1 from "./Accordion1.js";
 import {Provider} from "react-redux"
 import Store from "./Store/Store.js";
 import Showing from "./Showing.js";
+import HexGenerator from "./HexGenerator.js";
+import Stars1 from "./Stars1.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -70,9 +72,14 @@ root.render(
 
 
 {/* <Showing/> */}
-<Accordion1/>
+{/* <Accordion1/> */}
+{/* <HexGenerator/> */}
+{/* </HexGenerator> */}
 {/* </Accordion1> */}
 {/* </Showing> */}
+
+<Stars1/>
+{/* </Stars1> */}
 
 </Provider>
   </React.StrictMode>

@@ -26,6 +26,7 @@ import Store from "./Store/Store.js";
 import Showing from "./Showing.js";
 import HexGenerator from "./HexGenerator.js";
 import Stars1 from "./Stars1.js";
+import ImageSlider1 from "./ImageSlider1.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -78,8 +79,9 @@ root.render(
 {/* </Accordion1> */}
 {/* </Showing> */}
 
-<Stars1/>
+{/* <Stars1/> */}
 {/* </Stars1> */}
+<ImageSlider1/>
 
 </Provider>
   </React.StrictMode>

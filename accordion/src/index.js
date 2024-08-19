@@ -29,6 +29,9 @@ import Stars1 from "./Stars1.js";
 import ImageSlider1 from "./ImageSlider1.js";
 import LoadContent1 from "./LoadContent1.js";
 
+import TreeView from "./TreeView/TreeView.js";
+import Data from "./TreeView/data.js";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -83,8 +86,10 @@ root.render(
 {/* <Stars1/> */}
 {/* </Stars1> */}
 {/* <ImageSlider1/> */}
-<LoadContent1/>
+{/* <LoadContent1/> */}
  
+ <TreeView Data={Data}/>
+ {/* </TreeView> */}
 {/* </LoadContent1> */}
 </Provider>
   </React.StrictMode>

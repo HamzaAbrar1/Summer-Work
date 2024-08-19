@@ -31,6 +31,7 @@ import LoadContent1 from "./LoadContent1.js";
 
 import TreeView from "./TreeView/TreeView.js";
 import Data from "./TreeView/data.js";
+import QrCodeGenerator from "./QrCodeGenerator.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -88,8 +89,13 @@ root.render(
 {/* <ImageSlider1/> */}
 {/* <LoadContent1/> */}
  
- <TreeView Data={Data}/>
+ {/* <TreeView Data={Data}/> */}
  {/* </TreeView> */}
+
+<QrCodeGenerator/>
+  
+{/* </QrCodeGenerator> */}
+
 {/* </LoadContent1> */}
 </Provider>
   </React.StrictMode>

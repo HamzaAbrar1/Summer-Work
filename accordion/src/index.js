@@ -32,9 +32,18 @@ import LoadContent1 from "./LoadContent1.js";
 import TreeView from "./TreeView/TreeView.js";
 import Data from "./TreeView/data.js";
 import QrCodeGenerator from "./QrCodeGenerator.js";
-
+import CustomTab from "./CustomTab.js";
+import ModelPopup from "./ModelPopup.js";
+import Scroll from "./Scroll.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+
+
+const var1=` Manchester United, often referred to as "Man U" or simply "United," is one of the most iconic football clubs in the world. Founded in 1878 as Newton Heath LYR Football Club, it was renamed Manchester United in 1902. The club's rich history is filled with domestic and international success, including 20 English Premier League titles, which is a record in English football. United's home ground, Old Trafford, known as "The Theatre of Dreams," has witnessed countless memorable moments. Over the years, the club has cultivated a global fanbase, with millions of supporters across every continent, making it one of the most recognized and followed football teams worldwide.`
+const var2=`
+    Manchester United's legacy is deeply intertwined with the "Busby Babes," a generation of young players nurtured by legendary manager Sir Matt Busby. The tragic Munich air disaster in 1958, which claimed the lives of eight players, is a poignant chapter in the club's history. However, the team's resilience was exemplified when they rose from the ashes to win the European Cup a decade later in 1968, becoming the first English club to do so. The club continued its success under Sir Alex Ferguson, who managed the team from 1986 to 2013, leading them to numerous trophies, including two UEFA Champions League titles in 1999 and 2008. Ferguson's era is often regarded as the golden age of Manchester United, with the team dominating English football.
+    `
+    const var3=`In recent years, Manchester United has faced challenges in reclaiming its former glory, with a series of managerial changes and fluctuating performances. Despite this, the club remains a powerhouse, with significant financial clout, global sponsorships, and a squad brimming with talent. The ongoing rebuild under current management aims to restore United to its position at the pinnacle of English and European football. The club's commitment to youth development and attacking football continues to be a cornerstone of its philosophy. As the Red Devils strive to add to their trophy cabinet, the passionate support of their fans remains unwavering, driving the club forward in its pursuit of success.`
 root.render(
   <React.StrictMode>
     <Provider store={Store}>
@@ -92,11 +101,23 @@ root.render(
  {/* <TreeView Data={Data}/> */}
  {/* </TreeView> */}
 
-<QrCodeGenerator/>
-  
+{/* <QrCodeGenerator/> */}
+  {/* <CustomTab content1={var1 }
+  content2={var2}
+    content3={var3}
+   */}
+  {/* /> */}
+  {/* </CustomTab> */}
+  {/* <Scroll/> */}
+    
+  {/* </Scroll> */}
 {/* </QrCodeGenerator> */}
 
 {/* </LoadContent1> */}
+
+<ModelPopup/>
+{/* </ModalPopup> */}
+
 </Provider>
   </React.StrictMode>
 );

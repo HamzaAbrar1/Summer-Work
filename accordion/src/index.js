@@ -38,6 +38,7 @@ import Scroll from "./Scroll.js";
 
 import GitHubProfilefinder from "./GitHubProfilefinder.js";
 import GoogleSignin from "./GoogleSignin.js";
+import AutoComplete from "./AutoComplete.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -121,8 +122,12 @@ root.render(
 {/* <ModelPopup/> */}
 {/* </ModalPopup> */}
 {/* <GitHubProfilefinder/> */}
+{/* 
+<GoogleSignin/> */}
+<AutoComplete />
+{/* </AutoComplete> */}
 
-<GoogleSignin/>
+
 </Provider>
   </React.StrictMode>
 );

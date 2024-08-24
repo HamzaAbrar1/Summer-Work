@@ -37,6 +37,7 @@ import ModelPopup from "./ModelPopup.js";
 import Scroll from "./Scroll.js";
 
 import GitHubProfilefinder from "./GitHubProfilefinder.js";
+import GoogleSignin from "./GoogleSignin.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -119,8 +120,9 @@ root.render(
 
 {/* <ModelPopup/> */}
 {/* </ModalPopup> */}
-<GitHubProfilefinder/>
+{/* <GitHubProfilefinder/> */}
 
+<GoogleSignin/>
 </Provider>
   </React.StrictMode>
 );

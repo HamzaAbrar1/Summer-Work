@@ -35,6 +35,8 @@ import QrCodeGenerator from "./QrCodeGenerator.js";
 import CustomTab from "./CustomTab.js";
 import ModelPopup from "./ModelPopup.js";
 import Scroll from "./Scroll.js";
+
+import GitHubProfilefinder from "./GitHubProfilefinder.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
@@ -115,8 +117,9 @@ root.render(
 
 {/* </LoadContent1> */}
 
-<ModelPopup/>
+{/* <ModelPopup/> */}
 {/* </ModalPopup> */}
+<GitHubProfilefinder/>
 
 </Provider>
   </React.StrictMode>
